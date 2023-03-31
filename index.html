@@ -1,7 +1,420 @@
 <!DOCTYPE html>
 <html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_177161de298b111724a95260e2302e81 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    
+    
+            <div class="folium-map" id="map_177161de298b111724a95260e2302e81" ></div>
+        
 </body>
+<script>
+    
+    
+            var map_177161de298b111724a95260e2302e81 = L.map(
+                "map_177161de298b111724a95260e2302e81",
+                {
+                    center: [41.0, -87.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    alpha: 0.5,
+                    edgecolor: "k",
+                }
+            );
+            L.control.scale().addTo(map_177161de298b111724a95260e2302e81);
+
+            
+
+        
+    
+            var tile_layer_2994572a6565e95a2d0a1e2c6320ee55 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_177161de298b111724a95260e2302e81);
+        
+    
+            var marker_cluster_e2347ff16fe376addd4b41b6108da2c6 = L.markerClusterGroup(
+                {}
+            );
+            map_177161de298b111724a95260e2302e81.addLayer(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var marker_0563dde3380512c44bf287c475bed598 = L.marker(
+                [40.568074, -112.036398],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_e0d287134c179c4f7cc2ce8ffef61061 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_0563dde3380512c44bf287c475bed598.setIcon(icon_e0d287134c179c4f7cc2ce8ffef61061);
+        
+    
+        var popup_e020327b78192a49ccee3b4a8caa032d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2ffcc50000916c00a685cfc97e747ffd = $(`<div id="html_2ffcc50000916c00a685cfc97e747ffd" style="width: 100.0%; height: 100.0%;"><b> Name: </b>Project Zion<br><b> Stage: </b>Offer/LOI<br><b> Size: </b>51.07 Acres<br><b> Address: </b>6135 W 10120 S<br><b> City: </b>West Jordan<br><b> State: </b>UT</div>`)[0];
+                popup_e020327b78192a49ccee3b4a8caa032d.setContent(html_2ffcc50000916c00a685cfc97e747ffd);
+            
+        
+
+        marker_0563dde3380512c44bf287c475bed598.bindPopup(popup_e020327b78192a49ccee3b4a8caa032d)
+        ;
+
+        
+    
+    
+            var marker_8cf6106040ef0178489488314e49edf1 = L.marker(
+                [42.0166307253548, -87.9589097530687],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_2c1d850c7ba79c5c1014f6ec30d69660 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_8cf6106040ef0178489488314e49edf1.setIcon(icon_2c1d850c7ba79c5c1014f6ec30d69660);
+        
+    
+        var popup_12fb614c4542dccaeabd42f2b808fba9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e8d2274af2c86db4a981c2da1a10816 = $(`<div id="html_5e8d2274af2c86db4a981c2da1a10816" style="width: 100.0%; height: 100.0%;"><b> Name: </b>601 Busse<br><b> Stage: </b>Offer/LOI<br><b> Size: </b>17 Acres<br><b> Address: </b>601 Busse Road<br><b> City: </b>Elk Grove<br><b> State: </b>IL</div>`)[0];
+                popup_12fb614c4542dccaeabd42f2b808fba9.setContent(html_5e8d2274af2c86db4a981c2da1a10816);
+            
+        
+
+        marker_8cf6106040ef0178489488314e49edf1.bindPopup(popup_12fb614c4542dccaeabd42f2b808fba9)
+        ;
+
+        
+    
+    
+            var marker_cf9cf14d1fde80e1c74671f90ac958af = L.marker(
+                [38.907208, -77.452821],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_97934b7b904651d14ae75aa97e607ab2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_cf9cf14d1fde80e1c74671f90ac958af.setIcon(icon_97934b7b904651d14ae75aa97e607ab2);
+        
+    
+        var popup_1dec735feb8d1295ea9070faf185dfd3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_145f83933a1ca0851c718c3b6f7491c3 = $(`<div id="html_145f83933a1ca0851c718c3b6f7491c3" style="width: 100.0%; height: 100.0%;"><b> Name: </b>Avion Parkway Assemblage<br><b> Stage: </b>Offer/LOI<br><b> Size: </b>18.8 Acres<br><b> Address: </b>14685 Avion Parkway<br><b> City: </b>Chantilly<br><b> State: </b>VA</div>`)[0];
+                popup_1dec735feb8d1295ea9070faf185dfd3.setContent(html_145f83933a1ca0851c718c3b6f7491c3);
+            
+        
+
+        marker_cf9cf14d1fde80e1c74671f90ac958af.bindPopup(popup_1dec735feb8d1295ea9070faf185dfd3)
+        ;
+
+        
+    
+    
+            var marker_b207a51e6328e438a211e659c9819dc7 = L.marker(
+                [42.02136, -87.958121],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_1cd05104a668da62d2b1d99498eaa943 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_b207a51e6328e438a211e659c9819dc7.setIcon(icon_1cd05104a668da62d2b1d99498eaa943);
+        
+    
+        var popup_caf1b734f11880ffc99871065579d2de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0688c07756d41588bce0b25962555a6e = $(`<div id="html_0688c07756d41588bce0b25962555a6e" style="width: 100.0%; height: 100.0%;"><b> Name: </b>1905 E Higgins<br><b> Stage: </b>Offer/LOI<br><b> Size: </b>4.99 Acres<br><b> Address: </b>1905 E Higgins Rd<br><b> City: </b>Elk Grove Village<br><b> State: </b>IL</div>`)[0];
+                popup_caf1b734f11880ffc99871065579d2de.setContent(html_0688c07756d41588bce0b25962555a6e);
+            
+        
+
+        marker_b207a51e6328e438a211e659c9819dc7.bindPopup(popup_caf1b734f11880ffc99871065579d2de)
+        ;
+
+        
+    
+    
+            var marker_d58fe471bce5a76f921bef7f040e6ee0 = L.marker(
+                [34.048385, -118.256385],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_b50e0bf914d98eee426b88a6e2247df6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_d58fe471bce5a76f921bef7f040e6ee0.setIcon(icon_b50e0bf914d98eee426b88a6e2247df6);
+        
+    
+        var popup_fbef386dd15886b73b5962dcb91ae651 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d2897b0b11f28516dd693fa8160f1a9 = $(`<div id="html_9d2897b0b11f28516dd693fa8160f1a9" style="width: 100.0%; height: 100.0%;"><b> Name: </b>611 Wilshire<br><b> Stage: </b>Lead<br><b> Size: </b>.5 Acres<br><b> Address: </b>611 Wilshire Flyer<br><b> City: </b>Los Angeles<br><b> State: </b>CA</div>`)[0];
+                popup_fbef386dd15886b73b5962dcb91ae651.setContent(html_9d2897b0b11f28516dd693fa8160f1a9);
+            
+        
+
+        marker_d58fe471bce5a76f921bef7f040e6ee0.bindPopup(popup_fbef386dd15886b73b5962dcb91ae651)
+        ;
+
+        
+    
+    
+            var marker_7786e450f611689a082f3da5cb2df4a0 = L.marker(
+                [38.788476, -77.579513],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_a0c91ab0458455e5c8ca0372ed1d9a07 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_7786e450f611689a082f3da5cb2df4a0.setIcon(icon_a0c91ab0458455e5c8ca0372ed1d9a07);
+        
+    
+        var popup_128df8149ed4b1b51862462ddc4ee4b2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ec373ea80b5271fac594fbaa8bf79f4f = $(`<div id="html_ec373ea80b5271fac594fbaa8bf79f4f" style="width: 100.0%; height: 100.0%;"><b> Name: </b>ARC<br><b> Stage: </b>Under Review<br><b> Size: </b>117 Acres<br><b> Address: </b>5945 Wellington Rd<br><b> City: </b>Gainesville<br><b> State: </b>VA</div>`)[0];
+                popup_128df8149ed4b1b51862462ddc4ee4b2.setContent(html_ec373ea80b5271fac594fbaa8bf79f4f);
+            
+        
+
+        marker_7786e450f611689a082f3da5cb2df4a0.bindPopup(popup_128df8149ed4b1b51862462ddc4ee4b2)
+        ;
+
+        
+    
+    
+            var marker_bd7286c2b834c41433f8e9c4cb30006f = L.marker(
+                [38.941607, -77.547022],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_8c32a71f778549d19df5f9d54e1e1453 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_bd7286c2b834c41433f8e9c4cb30006f.setIcon(icon_8c32a71f778549d19df5f9d54e1e1453);
+        
+    
+        var popup_c29bbb1ed4036f136e920260e17a878d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f18968619c40f62bf721d65c784a0385 = $(`<div id="html_f18968619c40f62bf721d65c784a0385" style="width: 100.0%; height: 100.0%;"><b> Name: </b>Louden<br><b> Stage: </b>Hibernation<br><b> Size: </b>22 Acres<br><b> Address: </b>42100 John Mosby Hwy<br><b> City: </b>Aldie<br><b> State: </b>VA</div>`)[0];
+                popup_c29bbb1ed4036f136e920260e17a878d.setContent(html_f18968619c40f62bf721d65c784a0385);
+            
+        
+
+        marker_bd7286c2b834c41433f8e9c4cb30006f.bindPopup(popup_c29bbb1ed4036f136e920260e17a878d)
+        ;
+
+        
+    
+    
+            var marker_f1e740fa88bbac17a0c43f1d7f50627b = L.marker(
+                [39.025956, -77.423749],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_e1d01d8e22d1ac36de30a998f7dfc727 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_f1e740fa88bbac17a0c43f1d7f50627b.setIcon(icon_e1d01d8e22d1ac36de30a998f7dfc727);
+        
+    
+        var popup_d88f26398d99040f19a39593a67bd5f0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2e4458adca77bf8c0cfb26fe45e93e0 = $(`<div id="html_d2e4458adca77bf8c0cfb26fe45e93e0" style="width: 100.0%; height: 100.0%;"><b> Name: </b>Mall<br><b> Stage: </b>Hibernation<br><b> Size: </b>10 Acres<br><b> Address: </b>45564 Thayer Rd<br><b> City: </b>Sterling<br><b> State: </b>VA</div>`)[0];
+                popup_d88f26398d99040f19a39593a67bd5f0.setContent(html_d2e4458adca77bf8c0cfb26fe45e93e0);
+            
+        
+
+        marker_f1e740fa88bbac17a0c43f1d7f50627b.bindPopup(popup_d88f26398d99040f19a39593a67bd5f0)
+        ;
+
+        
+    
+    
+            var marker_f715473ee07df4270de54dc49f3f9aa1 = L.marker(
+                [40.095774, -82.763649],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_68c52256d3384b53089dd2d2962382b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_f715473ee07df4270de54dc49f3f9aa1.setIcon(icon_68c52256d3384b53089dd2d2962382b2);
+        
+    
+        var popup_010a511b0da9b12bdb2000d7e0d3984a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e3a2131ec2d63d09ba0c7fdbf1132bab = $(`<div id="html_e3a2131ec2d63d09ba0c7fdbf1132bab" style="width: 100.0%; height: 100.0%;"><b> Name: </b>New Albany<br><b> Stage: </b>Hibernation<br><b> Size: </b>110 Acres<br><b> Address: </b>8400 Central College Rd<br><b> City: </b>New Albany<br><b> State: </b>OH</div>`)[0];
+                popup_010a511b0da9b12bdb2000d7e0d3984a.setContent(html_e3a2131ec2d63d09ba0c7fdbf1132bab);
+            
+        
+
+        marker_f715473ee07df4270de54dc49f3f9aa1.bindPopup(popup_010a511b0da9b12bdb2000d7e0d3984a)
+        ;
+
+        
+    
+    
+            var marker_6ee821e7bbea13a431f08f776e1e9f59 = L.marker(
+                [38.884315, -77.462053],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_9b8967d85a9afdbd5077bb3c171160a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_6ee821e7bbea13a431f08f776e1e9f59.setIcon(icon_9b8967d85a9afdbd5077bb3c171160a8);
+        
+    
+        var popup_6faa5138b8b94547cf6ff038ff0f7c3e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d364f912b4d1811f0856c1fbbe3dce3d = $(`<div id="html_d364f912b4d1811f0856c1fbbe3dce3d" style="width: 100.0%; height: 100.0%;"><b> Name: </b>Project Recon<br><b> Stage: </b>Hibernation<br><b> Size: </b>18.64 Acres<br><b> Address: </b>Stonecroft Blvd & Lee Rd<br><b> City: </b>Chantilly<br><b> State: </b>VA</div>`)[0];
+                popup_6faa5138b8b94547cf6ff038ff0f7c3e.setContent(html_d364f912b4d1811f0856c1fbbe3dce3d);
+            
+        
+
+        marker_6ee821e7bbea13a431f08f776e1e9f59.bindPopup(popup_6faa5138b8b94547cf6ff038ff0f7c3e)
+        ;
+
+        
+    
+    
+            var marker_5f5e00914673bed3c74c7bc405131ee8 = L.marker(
+                [42.080861, -88.223399],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_3785c4a3969319f58efbd8164f7b83d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_5f5e00914673bed3c74c7bc405131ee8.setIcon(icon_3785c4a3969319f58efbd8164f7b83d1);
+        
+    
+        var popup_ab9a58731f35fcdfe4b00e31c39158a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d5faa0515bef0a17b79ad6fe7f5dc19a = $(`<div id="html_d5faa0515bef0a17b79ad6fe7f5dc19a" style="width: 100.0%; height: 100.0%;"><b> Name: </b>Hoffman Estates<br><b> Stage: </b>Passed<br><b> Size: </b>193 Acres<br><b> Address: </b>3333 Beverly Rd<br><b> City: </b>Hoffman Estates<br><b> State: </b>IL</div>`)[0];
+                popup_ab9a58731f35fcdfe4b00e31c39158a7.setContent(html_d5faa0515bef0a17b79ad6fe7f5dc19a);
+            
+        
+
+        marker_5f5e00914673bed3c74c7bc405131ee8.bindPopup(popup_ab9a58731f35fcdfe4b00e31c39158a7)
+        ;
+
+        
+    
+    
+            var marker_671a6ffc336327ded239cbc12f940637 = L.marker(
+                [42.534003, -87.891948],
+                {}
+            ).addTo(marker_cluster_e2347ff16fe376addd4b41b6108da2c6);
+        
+    
+            var icon_8dfb3613f1683e3979a91d97c7da7999 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_671a6ffc336327ded239cbc12f940637.setIcon(icon_8dfb3613f1683e3979a91d97c7da7999);
+        
+    
+        var popup_4190f0ae457a235784f06009c0538bf9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9e8850a38f0783bb11262dc8b8e80084 = $(`<div id="html_9e8850a38f0783bb11262dc8b8e80084" style="width: 100.0%; height: 100.0%;"><b> Name: </b>Dermody - Kenosha<br><b> Stage: </b>Passed<br><b> Size: </b>2,396,000 SF<br><b> Address: </b>95th St & Green Bay Rd<br><b> City: </b>Pleasant Prairie<br><b> State: </b>WI</div>`)[0];
+                popup_4190f0ae457a235784f06009c0538bf9.setContent(html_9e8850a38f0783bb11262dc8b8e80084);
+            
+        
+
+        marker_671a6ffc336327ded239cbc12f940637.bindPopup(popup_4190f0ae457a235784f06009c0538bf9)
+        ;
+
+        
+    
+    
+            var layer_control_d45021749c6c6a02e71daebf55eef227 = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_2994572a6565e95a2d0a1e2c6320ee55,
+                },
+                overlays :  {
+                    "Data Center" : marker_cluster_e2347ff16fe376addd4b41b6108da2c6,
+                },
+            };
+            L.control.layers(
+                layer_control_d45021749c6c6a02e71daebf55eef227.base_layers,
+                layer_control_d45021749c6c6a02e71daebf55eef227.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_177161de298b111724a95260e2302e81);
+        
+</script>
 </html>
